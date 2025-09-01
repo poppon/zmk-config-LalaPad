@@ -180,6 +180,22 @@
         };
     };
 
+    macros {
+        JIS_UNDSCR: JIS_UNDSCR {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp UNDER>;
+            label = "JIS_UNDSCR";
+        };
+
+        JIS_PIPE: JIS_PIPE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PIPE>;
+            label = "JIS_PIPE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -188,10 +204,10 @@
             sensor-bindings = <&scroll_down_up>, <&scroll_up_down>;
 
             bindings = <
-&kp ESC    &kp Q         &kp W         &kp E            &kp R        &kp T          &kp Y             &kp U        &kp I            &kp O       &kp P     &kp BACKSPACE
-&kp TAB    &kp A         &kp S         &kp D            &kp F        &kp G          &kp H             &kp J        &kp K            &kp L       &kp LBKT  &kp ENTER
-&kp LSHFT  &kp Z         &kp X         &kp C            &kp V        &kp B          &kp N             &kp M        &kp COMMA        &kp PERIOD  &kp NUBS  &kp RSHIFT
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &kp SPACE        &lt 2 LANG2  &mo 3          &mo SYSTEM_LAYER  &lt 1 LANG1  &kp RET          &trans      &trans    &kp RCTRL
+&kp ESC    &kp Q         &kp W         &kp E            &kp R        &kp T          &kp Y             &kp U        &kp I            &kp O       &kp P        &kp BACKSPACE
+&kp TAB    &kp A         &kp S         &kp D            &kp F        &kp G          &kp H             &kp J        &kp K            &kp L       &kp LBKT     &kp RSHIFT
+&kp LSHFT  &kp Z         &kp X         &kp C            &kp V        &kp B          &kp N             &kp M        &kp COMMA        &kp PERIOD  &JIS_UNDSCR  &kp RCTRL
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 LANG2      &kp SPACE    &mo 3          &mo SYSTEM_LAYER  &kp ENTER    &lt 1 LANG1      &kp LEFT    &kp DOWN     &kp RIGHT
                          &allow_end    &allow_pagedown  &allow_home  &allow_pageup  &allow_pageup     &allow_home  &allow_pagedown  &allow_end
             >;
         };
@@ -201,10 +217,10 @@
             sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
 
             bindings = <
-&kp TILDE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp LS(NUMBER_2)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp LS(NUMBER_6)  &kp LS(NON_US_BACKSLASH)  &trans
-&trans     &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LS(NUMBER_7)  &kp RBKT          &kp BSLH          &kp SEMI          &kp SQT                   &trans
-&trans     &trans        &trans        &trans        &trans        &trans        &kp LS(LBKT)      &kp LS(RBKT)      &kp LS(BSLH)      &kp EQUAL         &kp LS(EQUAL)             &trans
-&trans     &trans        &trans        &trans        &trans        &kp CAPS      &trans            &kp DELETE        &trans            &trans            &trans                    &trans
+&kp TILDE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp LS(NUMBER_3)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp LS(NUMBER_6)  &JIS_PIPE      &trans
+&trans     &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LS(NUMBER_7)  &kp RBKT          &kp BSLH          &kp SEMI          &kp SQT        &trans
+&trans     &trans        &trans        &trans        &trans        &trans        &kp LS(LBKT)      &kp LS(RBKT)      &kp LS(BSLH)      &kp EQUAL         &kp LS(EQUAL)  &trans
+&trans     &trans        &trans        &trans        &trans        &kp CAPS      &trans            &kp DELETE        &trans            &trans            &trans         &trans
                          &trans        &trans        &trans        &trans        &trans            &trans            &trans            &trans
             >;
         };
@@ -212,11 +228,11 @@
         TERTIARY_LAYER {
             display-name = "tertiary_layer";
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp DQT           &kp KP_PLUS      &kp KP_MINUS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
-&trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &kp LS(NUMBER_4)  &kp KP_ASTERISK  &kp KP_SLASH  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6
-&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &kp LS(NUMBER_5)  &kp EXCL         &kp QMARK     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
-&trans  &trans   &trans   &trans   &trans   &trans   &trans            &trans           &trans        &kp KP_NUMBER_0  &kp KP_DOT       &kp KP_ENTER
-                 &trans   &trans   &trans   &trans   &trans            &trans           &trans        &trans
+&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp DQT    &kp PLUS  &kp MINUS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
+&trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &kp SQT    &kp STAR  &kp SLASH  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6
+&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &kp GRAVE  &kp EXCL  &kp QMARK  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
+&trans  &trans   &trans   &trans   &trans   &trans   &trans     &trans    &trans     &kp KP_NUMBER_0  &kp KP_DOT       &kp KP_ENTER
+                 &trans   &trans   &trans   &trans   &trans     &trans    &trans     &trans
             >;
         };
 
