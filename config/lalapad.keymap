@@ -201,9 +201,9 @@
             sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
 
             bindings = <
-&kp TILDE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp LS(NUMBER_3)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp LS(NUMBER_6)  &kp LS(INTERNATIONAL_3)  &kp INTERNATIONAL_3
-&trans     &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LS(NUMBER_4)  &kp RBKT          &kp BSLH          &kp SEMI          &kp SQT                  &trans
-&trans     &trans        &trans        &trans        &trans        &trans        &kp LS(NUMBER_5)  &kp LS(RBKT)      &kp LS(BSLH)      &kp EQUAL         &kp LS(EQUAL)            &trans
+&kp TILDE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp LS(NUMBER_2)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp LS(NUMBER_6)  &kp LS(INTERNATIONAL_3)  &kp INTERNATIONAL_3
+&trans     &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LS(NUMBER_7)  &kp RBKT          &kp BSLH          &kp SEMI          &kp SQT                  &trans
+&trans     &trans        &trans        &trans        &trans        &trans        &kp LS(LBKT)      &kp LS(RBKT)      &kp LS(BSLH)      &kp EQUAL         &kp LS(EQUAL)            &trans
 &trans     &trans        &trans        &trans        &trans        &kp CAPS      &trans            &kp DELETE        &trans            &trans            &trans                   &trans
                          &kp D         &kp S         &kp A         &kp W         &trans            &trans            &trans            &trans
             >;
@@ -212,9 +212,9 @@
         TERTIARY_LAYER {
             display-name = "tertiary_layer";
             bindings = <
-&trans  &trans   &kp F2   &kp F3     &kp F4    &kp F5     &kp LS(NUMBER_2)  &kp LS(SEMI)  &kp MINUS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
-&trans  &kp F6   &kp F7   &kp F8     &kp F9    &kp F10    &kp LS(NUMBER_7)  &kp LS(SQT)   &kp SLASH  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6
-&trans  &kp F11  &kp F12  &kp F13    &kp F14   &kp F15    &kp LS(LBKT)      &kp EXCL      &kp QMARK  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
+&trans  &trans   &kp F2   &kp F3     &kp F4    &kp F5     &kp LS(NUMBER_3)  &kp LS(SEMI)  &kp MINUS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
+&trans  &kp F6   &kp F7   &kp F8     &kp F9    &kp F10    &kp LS(NUMBER_4)  &kp LS(SQT)   &kp SLASH  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6
+&trans  &kp F11  &kp F12  &kp F13    &kp F14   &kp F15    &kp LS(NUMBER_5)  &kp EXCL      &kp QMARK  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
 &trans  &trans   &trans   &trans     &trans    &trans     &trans            &trans        &trans     &kp KP_NUMBER_0  &kp KP_DOT       &kp KP_ENTER
                  &kp END  &kp PG_DN  &kp HOME  &kp PG_UP  &trans            &trans        &trans     &trans
             >;
