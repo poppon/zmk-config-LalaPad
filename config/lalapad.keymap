@@ -196,8 +196,8 @@
             >;
         };
 
-        SECONDARY_LAYER {
-            display-name = "secondary_layer";
+        PRIMARY_LAYER {
+            display-name = "primary_layer";
             sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
 
             bindings = <
@@ -209,8 +209,8 @@
             >;
         };
 
-        TERTIARY_LAYER {
-            display-name = "tertiary_layer";
+        SECONDARY_LAYER {
+            display-name = "secondary_layer";
             bindings = <
 &trans  &trans   &kp F2   &kp F3     &kp F4    &kp F5     &kp LS(NUMBER_3)  &kp LS(SEMI)  &kp MINUS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
 &trans  &kp F6   &kp F7   &kp F8     &kp F9    &kp F10    &kp LS(NUMBER_4)  &kp LS(SQT)   &kp SLASH  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6
@@ -220,8 +220,8 @@
             >;
         };
 
-        SYSTEM_LAYER {
-            display-name = "system_layer";
+        TERTIARY_LAYER {
+            display-name = "tertiary_layer";
             sensor-bindings = <&scroll_down_up>, <&volume_up_down>;
 
             bindings = <
@@ -252,38 +252,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        MOUSE_L_LAYER {
-            display-name = "mouse_l_layer";
-            bindings = <
-&trans              &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&mo SCROLL_L_LAYER  &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans              &trans     &mkp MB5   &mkp MB4   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans              &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                               &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        SCROLL_L_LAYER {
-            display-name = "scroll_l_layer";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        QUATERNARY_LAYER {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &kp PG_UP  &kp HOME  &kp UP    &kp END    &none   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &none   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none      &none     &none     &none      &none   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans    &trans    &trans     &trans  &trans
-                &trans  &trans  &trans  &trans  &trans     &trans    &trans    &trans
             >;
         };
     };
